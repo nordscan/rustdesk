@@ -1,0 +1,35 @@
+{
+  "app_name": "NBdesk",
+  "company": "NB",
+  "macos_bundle_id": "sk.nb.nbdesk",
+  "website": "",
+  "privacy_url": "",
+
+  "server": {
+    "id_server": "corten.nbt.kr:21116",
+    "relay_server": "corten.nbt.kr:21117",
+    "api_server": "https://corten.nbt.kr",
+    "key": "mhHHc5RtBuz0p8eS0+zhs3Fz0Km5ClLHHSEbxFccwHY="
+  },
+
+  "connection_type": "both",
+
+  "custom_client": {
+    "override-settings": {
+      "hide-server-settings": "Y",
+      "hide-proxy-settings": "Y",
+      "hide-websocket-settings": "Y",
+      "hide-help-cards": "Y",
+      "disable-change-id": "Y",
+      "disable-change-permanent-password": "Y",
+      "remove-preset-password-warning": "Y",
+      "verification-method": "use-both-passwords",
+      "approve-mode": "password-click"
+    },
+    "default-settings": {
+      "enable-lan-discovery": "N",
+      "theme": "system",
+      "lang": "default"
+    }
+  }
+}
