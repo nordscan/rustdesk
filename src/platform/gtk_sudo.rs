@@ -346,6 +346,11 @@ fn ui_parent(
                 break;
             }
             Ok(n) => {
+                // sudo writes a message's line break separately; a chunk holding only that
+                // must not replace the message kept for the error dialog.
+                if buf[..n].iter().all(u8::is_ascii_whitespace) {
+                    continue;
+                }
                 saved_output = String::default();
                 let buf = String::from_utf8_lossy(&buf[..n]).trim().to_string();
                 let last_line = buf.lines().last().unwrap_or(&buf).trim().to_string();
