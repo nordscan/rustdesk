@@ -20,6 +20,7 @@
       "hide-proxy-settings": "Y",
       "hide-websocket-settings": "Y",
       "hide-help-cards": "Y",
+      "hide-powered-by-me": "Y",
       "disable-change-id": "Y",
       "disable-change-permanent-password": "Y",
       "remove-preset-password-warning": "Y",
@@ -27,7 +28,7 @@
       "approve-mode": "password-click"
     },
     "default-settings": {
-      "enable-lan-discovery": "N",
+      "enable-lan-discovery": "Y",
       "theme": "system",
       "lang": "default"
     }

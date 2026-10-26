@@ -188,6 +188,8 @@ def main():
     mac = insert_after(mac, "Checkout source code", BRANDING_STEP)
     mac = insert_after(mac, "Build rustdesk", ADHOC_SIGN_STEP.format(app=app))
     mac = replace_all(mac, [
+        # macos-14 arm64 runners are rarely available, jobs get cancelled unacquired
+        ("os: macos-14,", "os: macos-15,"),
         ("RustDesk.app", f"{app}.app"),
         ("rustdesk-${{ env.VERSION }}-${{ matrix.job.arch }}.dmg", f"{slug}-${{{{ env.VERSION }}}}.dmg"),
         ("rustdesk-${{ env.VERSION }}", f"{slug}-${{{{ env.VERSION }}}}"),
